@@ -3,6 +3,7 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import { Sidebar, MobileSidebar } from "@/components/sidebar"
 import type React from "react" // Added import for React
+import { ThemeToggle } from "@/components/theme-toggle"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -26,7 +27,8 @@ export default function RootLayout({
           <div className="flex flex-1 flex-col overflow-hidden">
             <header className="flex h-14 items-center border-b px-4 lg:px-6">
               <MobileSidebar />
-              <h1 className="text-lg font-semibold">YouTube AI Summarizer</h1>
+              <h1 className="text-lg font-semibold flex-1">YouTube AI Summarizer</h1>
+              <ThemeToggle />
             </header>
             <main className="flex-1 overflow-y-auto p-4 md:p-6">{children}</main>
           </div>
